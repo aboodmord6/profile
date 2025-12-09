@@ -53,7 +53,7 @@ const Hero = () => {
   const [cursorVisible, setCursorVisible] = useState(true);
   const [isDot, setIsDot] = useState(false);
 
-  const titleText = "Hello, I'm Abdallah Zeine";
+  const titleText = "Hello, I'm Abdallah Zeine Elabidine";
   const subtitleText = "AI Engineer with Backend Experience";
   const typingSpeed = 50; // ms per character
 
