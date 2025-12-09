@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaBrain, FaUsers, FaComments, FaListCheck, FaDatabase, FaWindowMaximize, FaCode } from 'react-icons/fa6';
-import { SiPython, SiJavascript, SiPostgresql, SiMysql, SiDjango, SiReact, SiTailwindcss, SiPytorch, SiHtmx, SiGit, SiGithub, SiLinux, SiTensorflow, SiLangchain } from 'react-icons/si';
+import { SiPython, SiJavascript, SiPostgresql, SiMysql, SiDjango, SiReact, SiTailwindcss, SiPytorch, SiHtmx, SiGit, SiGithub, SiLinux, SiTensorflow, SiLangchain, SiDocker } from 'react-icons/si';
 
 const About = () => {
   // Unified neutral styling for all skills - icons keep their brand colors
@@ -32,7 +32,8 @@ const About = () => {
     'Dev & Ops': [
         { name: 'Git', icon: <SiGit className="text-orange-500" /> },
         { name: 'GitHub', icon: <SiGithub className="text-gray-700" /> },
-        { name: 'Linux', icon: <SiLinux className="text-yellow-600" /> }
+        { name: 'Linux', icon: <SiLinux className="text-yellow-600" /> },
+        { name: 'Docker', icon: <SiDocker className="text-blue-500" /> }
     ]
   };
 
@@ -57,7 +58,7 @@ const About = () => {
   };
 
   // Consistent base card class
-  const cardBaseIn = "card bg-base-200/50 border border-base-300/50 shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] hover:shadow-[inset_0_2px_8px_rgba(0,0,0,0.15)] transition-all duration-300";
+  const cardBaseIn = "card bg-base-200/50 border border-base-300/50 shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] transition-all duration-300";
   const cardBaseOut = "card bg-base-100 transition-all duration-300";
   return (
     <section id="about" className="py-24 relative overflow-hidden bg-base-100">
@@ -110,7 +111,7 @@ const About = () => {
                         <div className="text-xs text-base-content/50 mt-1">2022 - Present</div>
                         <div className="mt-2 flex flex-wrap gap-1.5">
                             <span className="px-2 py-0.5 rounded bg-base-200 text-base-content/70 text-xs font-medium">
-                                GPA 3.71
+                                GPA 3.71 / 4.0
                             </span>
                             <span className="px-2 py-0.5 rounded bg-base-200 text-base-content/70 text-xs font-medium">
                                 Senior
@@ -188,7 +189,7 @@ const About = () => {
                         { title: "Google Prompting", org: "Google", date: "Jun 2025", accent: "bg-orange-500" },
                         { title: "Meta Back-End Dev", org: "Meta", date: "Feb 2025", accent: "bg-blue-600" }
                     ].map((cert, i) => (
-                        <div key={i} className="flex items-stretch rounded-lg border border-base-200 bg-base-200/30 hover:bg-base-200/50 transition-colors overflow-hidden">
+                        <div key={i} className="flex items-stretch rounded-lg border border-base-200 bg-base-200 transition-colors overflow-hidden">
                             <div className={`w-1 ${cert.accent}`}></div>
                             <div className="flex flex-col p-3 flex-1">
                                 <span className="font-semibold text-sm text-base-content">{cert.title}</span>

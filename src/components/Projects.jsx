@@ -26,6 +26,7 @@ import hfawaBanner from '../../HfawaPreview/banner.png';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const projects = [
     {
@@ -165,12 +166,45 @@ const Projects = () => {
               
               <div className="grid gap-4 sm:grid-cols-2">
                 {selectedProject.gallery.map((img, idx) => (
-                  <div key={idx} className="rounded-xl overflow-hidden border border-base-200 shadow-sm transition-transform hover:scale-[1.02]">
+                  <div 
+                    key={idx} 
+                    className="rounded-xl overflow-hidden border border-base-200 shadow-sm transition-transform hover:scale-[1.02] cursor-pointer"
+                    onClick={() => setSelectedImage(img)}
+                  >
                     <img src={img} alt={`${selectedProject.title} screenshot ${idx + 1}`} className="w-full h-auto" />
                   </div>
                 ))}
               </div>
             </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Image Preview Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[70] flex items-center justify-center bg-black/95 p-4 backdrop-blur-md"
+            onClick={() => setSelectedImage(null)}
+          >
+            <button 
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 btn btn-circle btn-ghost text-white hover:bg-white/20 z-10"
+            >
+              <FiX className="text-2xl" />
+            </button>
+            <motion.img
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              src={selectedImage}
+              alt="Preview"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
           </motion.div>
         )}
       </AnimatePresence>
