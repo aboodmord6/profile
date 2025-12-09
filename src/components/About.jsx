@@ -57,8 +57,8 @@ const About = () => {
   };
 
   // Consistent base card class
-  const cardBase = "card bg-base-100 border border-base-200 hover:border-primary/30 shadow-sm hover:shadow-md transition-shadow duration-200";
-
+  const cardBaseIn = "card bg-base-200/50 border border-base-300/50 shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] hover:shadow-[inset_0_2px_8px_rgba(0,0,0,0.15)] transition-all duration-300";
+  const cardBaseOut = "card bg-base-100 transition-all duration-300";
   return (
     <section id="about" className="py-24 relative overflow-hidden bg-base-100">
         {/* Background Decorations - Subtle */}
@@ -94,7 +94,7 @@ const About = () => {
           
 
           {/* 1. Education */}
-          <motion.div variants={item} className={`md:col-span-6 ${cardBase}`}>
+          <motion.div variants={item} className={`md:col-span-6 ${cardBaseIn}`}>
              <div className="card-body p-6">
                 <h3 className="text-lg font-bold text-base-content flex items-center gap-2 mb-3">
                     <span className="text-xl">🎓</span> Education
@@ -122,7 +122,7 @@ const About = () => {
           </motion.div>
 
           {/* 2. Highlights */}
-          <motion.div variants={item} className={`md:col-span-6 ${cardBase}`}>
+          <motion.div variants={item} className={`md:col-span-6 ${cardBaseIn}`}>
             <div className="card-body p-6">
               <h3 className="text-lg font-bold text-base-content flex items-center gap-2 mb-4">
                 <span className="text-xl">🏆</span> Highlights
@@ -149,7 +149,7 @@ const About = () => {
           </motion.div>
 
           {/* 3. Skills - Full width */}
-          <motion.div variants={item} className={`md:col-span-12 ${cardBase}`}>
+          <motion.div variants={item} className={`md:col-span-12 ${cardBaseOut}`}>
             <div className="card-body p-6">
               <h3 className="text-lg font-bold text-base-content flex items-center gap-2 mb-4">
                 <span className="text-xl">🛠️</span> Tech Stack
@@ -177,7 +177,7 @@ const About = () => {
           </motion.div>
 
           {/* 5. Certifications - Neutral with left accent */}
-          <motion.div variants={item} className={`md:col-span-12 ${cardBase}`}>
+          <motion.div variants={item} className={`md:col-span-12 ${cardBaseOut}`}>
              <div className="card-body p-6">
                 <h3 className="text-lg font-bold text-base-content flex items-center gap-2 mb-4">
                     <span className="text-xl">📜</span> Certifications
@@ -204,7 +204,7 @@ const About = () => {
           </motion.div>
 
           {/* 6. Volunteering - Standard card style */}
-          <motion.div variants={item} className={`md:col-span-12 ${cardBase}`}>
+          <motion.div variants={item} className={`md:col-span-12 ${cardBaseIn}`}>
              <div className="card-body p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-lg bg-base-200 flex items-center justify-center text-xl">🤝</div>
