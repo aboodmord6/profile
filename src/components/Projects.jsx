@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiX, FiImage, FiBarChart2, FiFileText } from 'react-icons/fi';
+import { FiX, FiImage, FiBarChart2, FiFileText, FiExternalLink } from 'react-icons/fi';
 import { 
   SiPython, SiDjango, SiPytorch, SiTailwindcss, SiReact, SiMysql, 
   SiPostgresql, SiJavascript, SiHtmx, SiNumpy, SiPandas, SiGoogle,
@@ -36,7 +36,7 @@ const Projects = () => {
       icons: [<SiDjango title="Django" />, <SiGoogle title="Gemini" />, <SiTailwindcss title="Tailwind CSS" />, <SiPostgresql title="PostgreSQL" />],
       image: finAiBanner,
       gallery: [finAiBanks, finAiLogin, finAiChat, finAiReg, finAiAbout],
-      link: "#"
+      link: "https://github.com/aboodmord6/FinAi"
     },
     {
       title: "QuoteX",
@@ -45,7 +45,7 @@ const Projects = () => {
       icons: [<SiDjango title="Django" />, <SiHtmx title="HTMX" />, <SiJavascript title="JavaScript" />, <FiFileText title="PDF" />, <SiGoogle title="Gemini" />],
       image: quoteXBanner, // Using Dashboard as main preview to match others
       gallery: [quoteXDash, quoteXMgmt],
-      link: "#"
+      link: "https://github.com/aboodmord6/QuoteX"
     },
     {
       title: "Hfawa",
@@ -54,7 +54,7 @@ const Projects = () => {
       icons: [<SiDjango title="Django" />, <SiHtmx title="HTMX" />, <SiJavascript title="JavaScript" />, <SiTailwindcss title="Tailwind CSS" />, <SiPostgresql title="PostgreSQL" />],
       image: hfawaBanner,
       gallery: [], // Only one image, so no gallery needed
-      link: "#"
+      link: "https://github.com/aboodmord6/Hfawa-UIX"
     },
     {
       title: "Lung Cancer MRI Classification",
@@ -125,7 +125,16 @@ const Projects = () => {
                         {project.icons.map((icon, i) => <span key={i} className="hover:text-primary transition-colors cursor-help">{icon}</span>)}
                     </div>
                 </div>
-                <h3 className="card-title text-xl font-bold text-primary">{project.title}</h3>
+                <div className="flex items-center gap-2">
+                    {project.link !== "#" ? (
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group/link" title="View Code/Project">
+                            <h3 className="card-title text-xl font-bold text-primary group-hover/link:underline">{project.title}</h3>
+                            <FiExternalLink className="text-base-content/70 group-hover/link:text-primary transition-colors" />
+                        </a>
+                    ) : (
+                        <h3 className="card-title text-xl font-bold text-primary">{project.title}</h3>
+                    )}
+                </div>
                 <p className="text-base-content/80 text-sm leading-relaxed my-4">{project.description}</p>
                 <div className="card-actions justify-end mt-auto flex-wrap">
                   {project.tags.map((tag) => (
