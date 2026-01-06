@@ -136,11 +136,6 @@ const Projects = () => {
                     )}
                 </div>
                 <p className="text-base-content/80 text-sm leading-relaxed my-4">{project.description}</p>
-                <div className="card-actions justify-end mt-auto flex-wrap">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="badge badge-outline badge-sm p-3">{tag}</span>
-                  ))}
-                </div>
               </div>
             </motion.div>
           ))}

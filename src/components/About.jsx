@@ -1,16 +1,11 @@
 import { motion } from 'framer-motion';
-import { FaBrain, FaUsers, FaComments, FaListCheck, FaDatabase, FaWindowMaximize, FaCode } from 'react-icons/fa6';
+import { FaDatabase, FaWindowMaximize, FaCode, FaGraduationCap, FaTrophy, FaMedal, FaLaptopCode, FaWrench, FaCertificate, FaHandshake, FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import { SiPython, SiJavascript, SiPostgresql, SiMysql, SiDjango, SiReact, SiTailwindcss, SiPytorch, SiHtmx, SiGit, SiGithub, SiLinux, SiTensorflow, SiLangchain, SiDocker } from 'react-icons/si';
 
 const About = () => {
   // Unified neutral styling for all skills - icons keep their brand colors
   const skillsData = {
-    'Soft Skills': [
-        { name: 'Problem Solving', icon: <FaBrain className="text-rose-500" /> },
-        { name: 'Team Leadership', icon: <FaUsers className="text-violet-500" /> },
-        { name: 'Communication', icon: <FaComments className="text-sky-500" /> },
-        { name: 'Project Management', icon: <FaListCheck className="text-emerald-500" /> }
-    ],
+
     'Languages & DBMS': [
         { name: 'Python', icon: <SiPython className="text-blue-500" /> },
         { name: 'JavaScript', icon: <SiJavascript className="text-yellow-500" /> },
@@ -98,7 +93,7 @@ const About = () => {
           <motion.div variants={item} className={`md:col-span-6 ${cardBaseIn}`}>
              <div className="card-body p-6">
                 <h3 className="text-lg font-bold text-base-content flex items-center gap-2 mb-3">
-                    <span className="text-xl">🎓</span> Education
+                    <FaGraduationCap className="text-xl text-primary" /> Education
                 </h3>
                 <div className="flex gap-3">
                     <div className="flex flex-col items-center pt-1">
@@ -126,11 +121,11 @@ const About = () => {
           <motion.div variants={item} className={`md:col-span-6 ${cardBaseIn}`}>
             <div className="card-body p-6">
               <h3 className="text-lg font-bold text-base-content flex items-center gap-2 mb-4">
-                <span className="text-xl">🏆</span> Highlights
+                <FaTrophy className="text-xl text-amber-500" /> Highlights
               </h3>
               <div className="flex flex-wrap gap-6">
                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-base-200 flex items-center justify-center text-lg">🥇</div>
+                    <div className="w-10 h-10 rounded-lg bg-base-200 flex items-center justify-center text-lg"><FaMedal className="text-amber-500" /></div>
                     <div>
                         <div className="font-semibold text-base-content">Fintech Rally</div>
                         <div className="text-sm text-base-content/60">3rd Place • JOPACC</div>
@@ -138,7 +133,7 @@ const About = () => {
                     </div>
                  </div>
                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-base-200 flex items-center justify-center text-lg">💻</div>
+                    <div className="w-10 h-10 rounded-lg bg-base-200 flex items-center justify-center text-lg"><FaLaptopCode className="text-blue-500" /></div>
                     <div>
                         <div className="font-semibold text-base-content">Programming Contest</div>
                         <div className="text-sm text-base-content/60">Participant • AAU</div>
@@ -153,7 +148,7 @@ const About = () => {
           <motion.div variants={item} className={`md:col-span-12 ${cardBaseOut}`}>
             <div className="card-body p-6">
               <h3 className="text-lg font-bold text-base-content flex items-center gap-2 mb-4">
-                <span className="text-xl">🛠️</span> Tech Stack
+                <FaWrench className="text-xl text-primary" /> Tech Stack
               </h3>
               
               <div className="space-y-4">
@@ -181,7 +176,16 @@ const About = () => {
           <motion.div variants={item} className={`md:col-span-12 ${cardBaseOut}`}>
              <div className="card-body p-6">
                 <h3 className="text-lg font-bold text-base-content flex items-center gap-2 mb-4">
-                    <span className="text-xl">📜</span> Certifications
+                    <FaCertificate className="text-xl text-primary" /> Certifications
+                    <a 
+                      href="https://www.linkedin.com/in/abdallah-zeineelabidine/details/certifications/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="ml-1 text-base-content/40 hover:text-primary transition-colors"
+                      title="View all certifications on LinkedIn"
+                    >
+                      <FaArrowUpRightFromSquare className="text-sm" />
+                    </a>
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                     {[
@@ -208,7 +212,7 @@ const About = () => {
           <motion.div variants={item} className={`md:col-span-12 ${cardBaseIn}`}>
              <div className="card-body p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-base-200 flex items-center justify-center text-xl">🤝</div>
+                    <div className="w-10 h-10 rounded-lg bg-base-200 flex items-center justify-center text-xl"><FaHandshake className="text-primary" /></div>
                     <div>
                         <h3 className="text-lg font-bold text-base-content">Volunteering</h3>
                         <p className="text-sm text-base-content/60">Community Engagement</p>

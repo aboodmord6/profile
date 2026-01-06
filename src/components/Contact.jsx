@@ -22,18 +22,15 @@ const Contact = () => {
                   <FiMail className="text-xl"/>
                   <span>abdallahzeine@gmail.com</span>
                 </a>
+                <a href="tel:+962780071840" className="flex items-center gap-3 hover:translate-x-1 transition-transform">
+                  <FiPhone className="text-xl"/>
+                  <span>+962 78 007 1840</span>
+                </a>
                 <a href="tel:+966566454894" className="flex items-center gap-3 hover:translate-x-1 transition-transform">
                   <FiPhone className="text-xl"/>
-                  <span>+966-566-454-894</span>
+                  <span>+966 56 645 4894</span>
                 </a>
-                <div className="flex gap-4 mt-4">
-                  <a href="https://github.com/AbdallahZeine" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-circle btn-ghost bg-white/20 hover:bg-white/30 border-none text-white">
-                    <FiGithub />
-                  </a>
-                  <a href="https://linkedin.com/in/AbdallahZeine" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-circle btn-ghost bg-white/20 hover:bg-white/30 border-none text-white">
-                    <FiLinkedin />
-                  </a>
-                </div>
+                
               </div>
             </div>
             

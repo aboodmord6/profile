@@ -55,7 +55,7 @@ const Hero = () => {
 
   const titleText = "Hello, I'm Abdallah Zeine Elabidine";
   const subtitleText = "AI Engineer with Backend Experience";
-  const typingSpeed = 50; // ms per character
+  const typingSpeed =   20; // ms per character
 
   useEffect(() => {
     let titleIndex = 0;
