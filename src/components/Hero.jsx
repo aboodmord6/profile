@@ -227,11 +227,12 @@ const Hero = () => {
                 <span>•</span>
                 <a 
                   href="/cv.pdf" 
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 hover:text-primary transition-colors duration-200"
                 >
                   <FaFileAlt className="text-sm" />
-                  <span>Download CV</span>
+                  <span>View CV</span>
                 </a>
               </div>
 

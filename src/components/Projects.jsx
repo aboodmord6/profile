@@ -99,7 +99,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-base-200 overflow-hidden group"
+              className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-base-200 overflow-hidden group"
             >
               <figure className="relative h-48 bg-base-200 overflow-hidden group cursor-pointer" onClick={() => project.gallery.length > 0 && setSelectedProject(project)}>
                 {project.image ? (

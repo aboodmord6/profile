@@ -24,7 +24,7 @@ const About = () => {
         { name: 'HTMX', icon: <SiHtmx className="text-blue-500" /> },
         { name: 'Tkinter', icon: <FaWindowMaximize className="text-gray-500" /> }
     ],
-    'Dev & Ops': [
+    'DevOps': [
         { name: 'Git', icon: <SiGit className="text-orange-500" /> },
         { name: 'GitHub', icon: <SiGithub className="text-gray-700" /> },
         { name: 'Linux', icon: <SiLinux className="text-yellow-600" /> },
@@ -109,7 +109,7 @@ const About = () => {
                                 GPA 3.71 / 4.0
                             </span>
                             <span className="px-2 py-0.5 rounded bg-base-200 text-base-content/70 text-xs font-medium">
-                                Senior
+                                Senior Year
                             </span>
                         </div>
                     </div>
@@ -159,7 +159,7 @@ const About = () => {
                       {skills.map((skill) => (
                         <div
                           key={skill.name}
-                          className="inline-flex items-center gap-2 rounded-lg py-2 px-3 text-base font-medium bg-base-200/70 text-base-content/80 border border-base-300/50 hover:border-primary/30 transition-colors cursor-default"
+                          className="inline-flex items-center gap-2 rounded-lg py-2 px-3 text-base font-medium bg-base-200/70 text-base-content/80 border border-base-300/50 cursor-default"
                         >
                           <span className="text-lg">{skill.icon}</span>
                           <span>{skill.name}</span>
