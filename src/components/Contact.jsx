@@ -24,11 +24,11 @@ const Contact = () => {
                 </a>
                 <a href="tel:+962780071840" className="flex items-center gap-3 hover:translate-x-1 transition-transform">
                   <FiPhone className="text-xl"/>
-                  <span>+962 78 007 1840</span>
+                  <span>+962 78 007 1840</span> 
                 </a>
                 <a href="tel:+966566454894" className="flex items-center gap-3 hover:translate-x-1 transition-transform">
                   <FiPhone className="text-xl"/>
-                  <span>+966 56 645 4894</span>
+                  <span>+966 56 645 4894</span> (Secondary)
                 </a>
                 
               </div>

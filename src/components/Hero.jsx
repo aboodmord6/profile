@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import bgPattern from '../Background.svg'
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -225,15 +226,13 @@ const Hero = () => {
                 <FaMapMarkerAlt className="text-primary" />
                 <span>Based in Jeddah, Saudi Arabia • Open to opportunities</span>
                 <span>•</span>
-                <a 
-                  href="/cv.pdf" 
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link 
+                  to="/cv" 
                   className="inline-flex items-center gap-1 hover:text-primary transition-colors duration-200"
                 >
                   <FaFileAlt className="text-sm" />
                   <span>View CV</span>
-                </a>
+                </Link>
               </div>
 
               <div className="flex flex-wrap mb-12">

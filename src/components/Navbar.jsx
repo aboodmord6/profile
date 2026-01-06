@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiHome, FiUser, FiFolder, FiMail, FiGithub, FiLinkedin, FiFileText } from 'react-icons/fi';
 
@@ -65,33 +66,32 @@ const Navbar = () => {
           })}
           
           {/* CV View */}
-          <motion.a
-            href="/cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-10 h-10 rounded-xl text-base-100/80 hover:text-primary transition-colors duration-200"
-            onMouseEnter={() => setHoveredItem('View CV')}
-            onMouseLeave={() => setHoveredItem(null)}
-            whileHover={{ scale: 1.15, y: -4 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <FiFileText className="w-5 h-5 relative z-10" />
-            
-            <AnimatePresence>
-              {hoveredItem === 'View CV' && (
-                <motion.span
-                  initial={{ opacity: 0, y: 10, scale: 0.8 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 10, scale: 0.8 }}
-                  transition={{ duration: 0.15 }}
-                  className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-primary text-primary-content text-xs font-medium rounded-lg whitespace-nowrap shadow-lg"
-                >
-                  View CV
-                  <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-primary" />
-                </motion.span>
-              )}
-            </AnimatePresence>
-          </motion.a>
+          <Link to="/cv">
+            <motion.div
+              className="relative flex items-center justify-center w-10 h-10 rounded-xl text-base-100/80 hover:text-primary transition-colors duration-200"
+              onMouseEnter={() => setHoveredItem('View CV')}
+              onMouseLeave={() => setHoveredItem(null)}
+              whileHover={{ scale: 1.15, y: -4 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FiFileText className="w-5 h-5 relative z-10" />
+              
+              <AnimatePresence>
+                {hoveredItem === 'View CV' && (
+                  <motion.span
+                    initial={{ opacity: 0, y: 10, scale: 0.8 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.8 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-primary text-primary-content text-xs font-medium rounded-lg whitespace-nowrap shadow-lg"
+                  >
+                    View CV
+                    <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-primary" />
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          </Link>
         </div>
       </motion.nav>
 

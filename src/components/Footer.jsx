@@ -20,7 +20,7 @@ const Footer = () => {
                 </a>
                 <a href="tel:+966566454894" className="flex items-center gap-2 hover:text-primary transition-colors group">
                     <FiPhone className="text-lg group-hover:scale-110 transition-transform" />
-                    <span>+966 56 645 4894 (Saudi Arabia)</span>
+                    <span>+966 56 645 4894 (Saudi Arabia) (Secondary) </span>
                 </a>
             </div>
         </div>
