@@ -221,12 +221,15 @@ const About = () => {
                 
                 <div className="flex flex-wrap gap-3">
                     {[
-                        { role: "Event Coordinator", org: "IEEE CS Chapter" },
-                        { role: "Course Manager", org: "Data Science Club" }
+                        { role: "Event Coordinator", org: "IEEE CS Chapter", logo: "/IEEE-CS_LogoTM-orange.png" },
+                        { role: "Course Manager", org: "Data Science Club", logo: "/DSAI_logo.jpg" }
                     ].map((vol, i) => (
-                        <div key={i} className="flex flex-col bg-base-200/50 py-2 px-3 rounded-lg border border-base-200">
-                             <span className="font-semibold text-sm text-base-content">{vol.role}</span>
-                             <span className="text-xs text-base-content/50">{vol.org}</span>
+                        <div key={i} className="flex items-center gap-3 bg-base-200/50 py-2 px-3 rounded-lg border border-base-200">
+                             <img src={vol.logo} alt={vol.org} className="w-8 h-8 object-contain rounded" />
+                             <div className="flex flex-col">
+                                 <span className="font-semibold text-sm text-base-content">{vol.role}</span>
+                                 <span className="text-xs text-base-content/50">{vol.org}</span>
+                             </div>
                         </div>
                     ))}
                 </div>
