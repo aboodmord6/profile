@@ -24,6 +24,12 @@ import quoteXBanner from '../../QuoteXPreview/banner.png';
 // Hfawa
 import hfawaBanner from '../../HfawaPreview/banner.png';
 
+// FER (Facial Expression Recognition)
+import ferThumbnail from '../../FERPreview/FERthumnail.png';
+
+// OCR
+import ocrThumbnail from '/ocr.png';
+
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -57,6 +63,24 @@ const Projects = () => {
       link: "https://github.com/aboodmord6/Hfawa-UIX"
     },
     {
+      title: "Facial Expression Recognition",
+      description: "A deep learning project for classifying facial expressions into 6 emotion categories using MobileNetV4 architecture.",
+      tags: ["PyTorch", "OpenCV", "Python", "Deep Learning"],
+      icons: [<SiPytorch title="PyTorch" />, <SiPython title="Python" />, <SiNumpy title="NumPy" />, <FiBarChart2 title="Matplotlib" />],
+      image: ferThumbnail,
+      gallery: [],
+      link: "https://github.com/aboodmord6/Facial-expression-project"
+    },
+    {
+      title: "OCR Deep Learning Model",
+      description: "Custom, optimized OCR architecture solving complex CAPTCHAs with 93% accuracy.",
+      tags: ["PyTorch", "Python", "Matplotlib", "Numpy", "Pandas"],
+      icons: [<SiPytorch title="PyTorch" />, <SiPython title="Python" />, <SiNumpy title="Numpy" />, <SiPandas title="Pandas" />, <FiBarChart2 title="Matplotlib" />],
+      image: ocrThumbnail,
+      gallery: [],
+      link: "#"
+    },
+    {
       title: "Lung Cancer MRI Classification",
       description: "Multi-class MRI tumor classification using ResNet with 91% accuracy and GAN-balanced datasets.",
       tags: ["PyTorch", "Python", "Matplotlib", "Numpy", "Pandas"],
@@ -64,16 +88,8 @@ const Projects = () => {
       image: null,
       gallery: [],
       link: "#"
-    },
-    {
-      title: "OCR Deep Learning Model",
-      description: "Custom, optimized OCR architecture solving complex CAPTCHAs with 93% accuracy.",
-      tags: ["PyTorch", "Python", "Matplotlib", "Numpy", "Pandas"],
-      icons: [<SiPytorch title="PyTorch" />, <SiPython title="Python" />, <SiNumpy title="Numpy" />, <SiPandas title="Pandas" />, <FiBarChart2 title="Matplotlib" />],
-      image: null,
-      gallery: [],
-      link: "#"
     }
+    
   ];
 
   return (
