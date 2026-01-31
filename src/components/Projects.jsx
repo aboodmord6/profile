@@ -78,7 +78,7 @@ const Projects = () => {
       icons: [<SiPytorch title="PyTorch" />, <SiPython title="Python" />, <SiNumpy title="Numpy" />, <SiPandas title="Pandas" />, <FiBarChart2 title="Matplotlib" />],
       image: ocrThumbnail,
       gallery: [],
-      link: "#"
+      link: "https://github.com/aboodmord6/OCR-Custom-model"
     },
     {
       title: "Lung Cancer MRI Classification",
